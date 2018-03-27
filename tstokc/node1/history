@@ -1,0 +1,5 @@
+admin.nodeInfo
+miner.start()
+okc.blockNumber
+miner.stop()
+okc.getBalance(okc.coinbase)

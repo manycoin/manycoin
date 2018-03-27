@@ -1,0 +1,27 @@
+find . -name "*okcoin*" -type d | sed -r -n 's/(.*)([^\/]*)okcoin([^\/]*)$/mv & \1\2okcoin\3/e'
+find . -name "*Okcoin*" -type d | sed -r -n 's/(.*)([^\/]*)Okcoin([^\/]*)$/mv & \1\2Okcoin\3/e'
+find . -name "*OKCEREUM*" -type d | sed -r -n 's/(.*)([^\/]*)OKCEREUM([^\/]*)$/mv & \1\2OKCOIN\3/e'
+find . -name "*okc*" -type d | sed -r -n 's/(.*)([^\/]*)okc([^\/]*)$/mv & \1\2okc\3/e'
+find . -name "*Okc*" -type d | sed -r -n 's/(.*)([^\/]*)Okc([^\/]*)$/mv & \1\2Okc\3/e'
+find . -name "*OKC*" -type d | sed -r -n 's/(.*)([^\/]*)OKC([^\/]*)$/mv & \1\2OKC\3/e'
+find . -name "*prometheus*" -type d | sed -r -n 's/(.*)([^\/]*)prometheus([^\/]*)$/mv & \1\2prometheus\3/e'
+find . -name "*prometheus*" -type d | sed -r -n 's/(.*)([^\/]*)prometheus([^\/]*)$/mv & \1\2prometheus\3/e'
+
+find . -name "*okcoin*" -type f | sed -r -n 's/(.*)([^\/]*)okcoin([^\/]*)$/mv & \1\2okcoin\3/e'
+find . -name "*Okcoin*" -type f | sed -r -n 's/(.*)([^\/]*)Okcoin([^\/]*)$/mv & \1\2Okcoin\3/e'
+find . -name "*OKCEREUM*" -type f | sed -r -n 's/(.*)([^\/]*)OKCEREUM([^\/]*)$/mv & \1\2OKCOIN\3/e'
+find . -name "*okc*" -type f | sed -r -n 's/(.*)([^\/]*)okc([^\/]*)$/mv & \1\2okc\3/e'
+find . -name "*Okc*" -type f | sed -r -n 's/(.*)([^\/]*)Okc([^\/]*)$/mv & \1\2Okc\3/e'
+find . -name "*OKC*" -type f | sed -r -n 's/(.*)([^\/]*)OKC([^\/]*)$/mv & \1\2OKC\3/e'
+find . -name "*prometheus*" -type f | sed -r -n 's/(.*)([^\/]*)prometheus([^\/]*)$/mv & \1\2prometheus\3/e'
+
+grep "okcoin" * -R | awk -F: '{print $1}' | sort | uniq | xargs sed -i 's/okcoin/okcoin/g'
+grep "Okcoin" * -R | awk -F: '{print $1}' | sort | uniq | xargs sed -i 's/Okcoin/Okcoin/g'
+grep "okc" * -R | awk -F: '{print $1}' | sort | uniq | xargs sed -i 's/okc/okc/g'
+grep "OKC" * -R | awk -F: '{print $1}' | sort | uniq | xargs sed -i 's/OKC/OKC/g'
+grep "Okc" * -R | awk -F: '{print $1}' | sort | uniq | xargs sed -i 's/Okc/Okc/g'
+
+grep "Method" * -R | awk -F: '{print $1}' | sort | uniq | xargs sed -i 's/Method/Method/g'
+grep "method" * -R | awk -F: '{print $1}' | sort | uniq | xargs sed -i 's/method/method/g'
+grep "prometheus" * -R | awk -F: '{print $1}' | sort | uniq | xargs sed -i 's/prometheus/prometheus/g'
+

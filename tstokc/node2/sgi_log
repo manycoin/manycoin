@@ -1,0 +1,108 @@
+INFO [03-27|09:22:29] Maximum peer count                       OKC=25 LES=0 total=25
+INFO [03-27|09:22:29] Starting peer-to-peer node               instance=Gokc/test_sgi1803/v1.8.3-unstable-322006d0/linux-amd64/go1.9.2
+INFO [03-27|09:22:29] Allocated cache and file handles         database=/root/andy/go-okc/tstokc/node2/gokc/chaindata cache=768 handles=1024
+WARN [03-27|09:22:29] Upgrading database to use lookup entries 
+INFO [03-27|09:22:29] Initialised chain configuration          config="{ChainID: 20180327 Homestead: 0 DAO: <nil> DAOSupport: false EIP150: <nil> EIP155: 0 EIP158: 0 Byzantium: <nil> Constantinople: <nil> Engine: unknown}"
+INFO [03-27|09:22:29] Disk storage enabled for okcash caches   dir=/root/andy/go-okc/tstokc/node2/gokc/okcash count=3
+INFO [03-27|09:22:29] Disk storage enabled for okcash DAGs     dir=/root/.okcash                              count=2
+INFO [03-27|09:22:29] Initialising Okcoin protocol             versions="[63 62]" network=20180327
+INFO [03-27|09:22:29] Database deduplication successful        deduped=0
+INFO [03-27|09:22:29] Loaded most recent local header          number=0 hash=8204d8…519b67 td=16384
+INFO [03-27|09:22:29] Loaded most recent local full block      number=0 hash=8204d8…519b67 td=16384
+INFO [03-27|09:22:29] Loaded most recent local fast block      number=0 hash=8204d8…519b67 td=16384
+INFO [03-27|09:22:29] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [03-27|09:22:29] Starting P2P networking 
+INFO [03-27|09:22:29] RLPx listener up                         self="enode://376db1b0448e1d6ce7cb3a3f789d06cf89cf326d3859b3c0dcb4ebc5763c5815f73cc775a24119db47a1f0a9ef0b38b5eb2ec9e1e7c5239713b5ccea3188fbd9@[::]:31802?discport=0"
+INFO [03-27|09:22:29] IPC endpoint opened                      url=/root/andy/go-okc/tstokc/node2/gokc.ipc
+INFO [03-27|09:22:29] HTTP endpoint opened                     url=http://127.0.0.1:1802                   cors=* vhosts=localhost
+INFO [03-27|09:23:27] Updated mining threads                   threads=0
+INFO [03-27|09:23:27] Transaction pool price threshold updated price=18000000000
+ERROR[03-27|09:23:27] Cannot start mining without okcerbase    err="okcerbase must be explicitly specified"
+INFO [03-27|09:23:51] Updated mining threads                   threads=0
+INFO [03-27|09:23:51] Transaction pool price threshold updated price=18000000000
+INFO [03-27|09:23:51] Okcerbase automatically configured       address=0x7BDAc4a3Ed1025dAFD2C4cec22Fa185894e301d7
+INFO [03-27|09:23:51] Starting mining operation 
+INFO [03-27|09:23:51] Commit new mining work                   number=1 txs=0 uncles=0 elapsed=184.749µs
+INFO [03-27|09:23:53] Successfully sealed new block            number=1 hash=4a02ac…d8056e
+INFO [03-27|09:23:53] 🔨 mined potential block                  number=1 hash=4a02ac…d8056e
+INFO [03-27|09:23:53] Commit new mining work                   number=2 txs=0 uncles=0 elapsed=130.924µs
+INFO [03-27|09:23:55] Successfully sealed new block            number=2 hash=a35e2d…e4608d
+INFO [03-27|09:23:55] 🔨 mined potential block                  number=2 hash=a35e2d…e4608d
+INFO [03-27|09:23:55] Commit new mining work                   number=3 txs=0 uncles=0 elapsed=102.265µs
+INFO [03-27|09:23:56] Successfully sealed new block            number=3 hash=f9747d…d8c436
+INFO [03-27|09:23:56] 🔨 mined potential block                  number=3 hash=f9747d…d8c436
+INFO [03-27|09:23:56] Commit new mining work                   number=4 txs=0 uncles=0 elapsed=109.299µs
+INFO [03-27|09:23:57] Successfully sealed new block            number=4 hash=d98110…79eb33
+INFO [03-27|09:23:57] 🔨 mined potential block                  number=4 hash=d98110…79eb33
+INFO [03-27|09:23:57] Commit new mining work                   number=5 txs=0 uncles=0 elapsed=94.018µs
+INFO [03-27|09:24:00] Successfully sealed new block            number=5 hash=a76ccb…3edd44
+INFO [03-27|09:24:00] 🔨 mined potential block                  number=5 hash=a76ccb…3edd44
+INFO [03-27|09:24:00] Commit new mining work                   number=6 txs=0 uncles=0 elapsed=112.777µs
+INFO [03-27|09:24:00] Successfully sealed new block            number=6 hash=314c9c…bc8814
+INFO [03-27|09:24:00] 🔗 block reached canonical chain          number=1 hash=4a02ac…d8056e
+INFO [03-27|09:24:00] 🔨 mined potential block                  number=6 hash=314c9c…bc8814
+INFO [03-27|09:24:00] Commit new mining work                   number=7 txs=0 uncles=0 elapsed=91.305µs
+INFO [03-27|09:24:01] Successfully sealed new block            number=7 hash=dd55a4…602b72
+INFO [03-27|09:24:01] 🔗 block reached canonical chain          number=2 hash=a35e2d…e4608d
+INFO [03-27|09:24:01] 🔨 mined potential block                  number=7 hash=dd55a4…602b72
+INFO [03-27|09:24:01] Commit new mining work                   number=8 txs=0 uncles=0 elapsed=98.371µs
+INFO [03-27|09:24:06] Successfully sealed new block            number=8 hash=104af5…f8cc8b
+INFO [03-27|09:24:06] 🔗 block reached canonical chain          number=3 hash=f9747d…d8c436
+INFO [03-27|09:24:06] 🔨 mined potential block                  number=8 hash=104af5…f8cc8b
+INFO [03-27|09:24:06] Commit new mining work                   number=9 txs=0 uncles=0 elapsed=127.738µs
+INFO [03-27|09:24:07] Successfully sealed new block            number=9 hash=11b7f2…885c8f
+INFO [03-27|09:24:07] 🔗 block reached canonical chain          number=4 hash=d98110…79eb33
+INFO [03-27|09:24:07] 🔨 mined potential block                  number=9 hash=11b7f2…885c8f
+INFO [03-27|09:24:07] Commit new mining work                   number=10 txs=0 uncles=0 elapsed=97.859µs
+INFO [03-27|09:24:08] Successfully sealed new block            number=10 hash=333196…f8e008
+INFO [03-27|09:24:08] 🔗 block reached canonical chain          number=5  hash=a76ccb…3edd44
+INFO [03-27|09:24:08] 🔨 mined potential block                  number=10 hash=333196…f8e008
+INFO [03-27|09:24:08] Commit new mining work                   number=11 txs=0 uncles=0 elapsed=104.16µs
+INFO [03-27|09:24:09] Successfully sealed new block            number=11 hash=0dbf13…31730a
+INFO [03-27|09:24:09] 🔗 block reached canonical chain          number=6  hash=314c9c…bc8814
+INFO [03-27|09:24:09] 🔨 mined potential block                  number=11 hash=0dbf13…31730a
+INFO [03-27|09:24:09] Commit new mining work                   number=12 txs=0 uncles=0 elapsed=95.64µs
+INFO [03-27|09:24:10] Successfully sealed new block            number=12 hash=a9a3a4…5dec86
+INFO [03-27|09:24:10] 🔗 block reached canonical chain          number=7  hash=dd55a4…602b72
+INFO [03-27|09:24:10] 🔨 mined potential block                  number=12 hash=a9a3a4…5dec86
+INFO [03-27|09:24:10] Commit new mining work                   number=13 txs=0 uncles=0 elapsed=125.803µs
+INFO [03-27|09:24:10] Successfully sealed new block            number=13 hash=e891b4…24022e
+INFO [03-27|09:24:10] 🔗 block reached canonical chain          number=8  hash=104af5…f8cc8b
+INFO [03-27|09:24:10] 🔨 mined potential block                  number=13 hash=e891b4…24022e
+INFO [03-27|09:24:10] Commit new mining work                   number=14 txs=0 uncles=0 elapsed=108.2µs
+INFO [03-27|09:24:10] Successfully sealed new block            number=14 hash=6ae8f1…930de5
+INFO [03-27|09:24:10] 🔗 block reached canonical chain          number=9  hash=11b7f2…885c8f
+INFO [03-27|09:24:10] 🔨 mined potential block                  number=14 hash=6ae8f1…930de5
+INFO [03-27|09:24:10] Mining too far in the future             wait=2s
+INFO [03-27|09:24:12] Commit new mining work                   number=15 txs=0 uncles=0 elapsed=2.000s
+INFO [03-27|09:24:15] Successfully sealed new block            number=15 hash=3c6738…d98efe
+INFO [03-27|09:24:15] 🔗 block reached canonical chain          number=10 hash=333196…f8e008
+INFO [03-27|09:24:15] 🔨 mined potential block                  number=15 hash=3c6738…d98efe
+INFO [03-27|09:24:15] Commit new mining work                   number=16 txs=0 uncles=0 elapsed=142.933µs
+INFO [03-27|09:24:19] Successfully sealed new block            number=16 hash=12b75f…6dcee6
+INFO [03-27|09:24:19] 🔗 block reached canonical chain          number=11 hash=0dbf13…31730a
+INFO [03-27|09:24:19] 🔨 mined potential block                  number=16 hash=12b75f…6dcee6
+INFO [03-27|09:24:19] Commit new mining work                   number=17 txs=0 uncles=0 elapsed=99.405µs
+INFO [03-27|09:24:22] Successfully sealed new block            number=17 hash=1ef589…329883
+INFO [03-27|09:24:22] 🔗 block reached canonical chain          number=12 hash=a9a3a4…5dec86
+INFO [03-27|09:24:22] 🔨 mined potential block                  number=17 hash=1ef589…329883
+INFO [03-27|09:24:22] Commit new mining work                   number=18 txs=0 uncles=0 elapsed=136.548µs
+INFO [03-27|09:24:23] Successfully sealed new block            number=18 hash=a3a09b…adb06d
+INFO [03-27|09:24:23] 🔗 block reached canonical chain          number=13 hash=e891b4…24022e
+INFO [03-27|09:24:23] 🔨 mined potential block                  number=18 hash=a3a09b…adb06d
+INFO [03-27|09:24:23] Commit new mining work                   number=19 txs=0 uncles=0 elapsed=105.046µs
+INFO [03-27|09:24:23] Successfully sealed new block            number=19 hash=2daab0…95ea9c
+INFO [03-27|09:24:23] 🔗 block reached canonical chain          number=14 hash=6ae8f1…930de5
+INFO [03-27|09:24:23] 🔨 mined potential block                  number=19 hash=2daab0…95ea9c
+INFO [03-27|09:24:23] Commit new mining work                   number=20 txs=0 uncles=0 elapsed=99.137µs
+INFO [03-27|09:29:22] HTTP endpoint closed                     url=http://127.0.0.1:1802
+INFO [03-27|09:29:22] IPC endpoint closed                      endpoint=/root/andy/go-okc/tstokc/node2/gokc.ipc
+INFO [03-27|09:29:22] Writing cached state to disk             block=19 hash=2daab0…95ea9c root=9223b7…23713e
+INFO [03-27|09:29:22] Persisted trie from memory database      nodes=2 size=378.00B time=41.963µs gcnodes=0 gcsize=0.00B gctime=0s livenodes=37 livesize=5.87kB
+INFO [03-27|09:29:22] Writing cached state to disk             block=18 hash=a3a09b…adb06d root=5f41cc…944df6
+INFO [03-27|09:29:22] Persisted trie from memory database      nodes=2 size=326.00B time=11.56µs  gcnodes=0 gcsize=0.00B gctime=0s livenodes=35 livesize=5.54kB
+INFO [03-27|09:29:22] Blockchain manager stopped 
+INFO [03-27|09:29:22] Stopping Okcoin protocol 
+INFO [03-27|09:29:22] Okcoin protocol stopped 
+INFO [03-27|09:29:22] Transaction pool stopped 
+INFO [03-27|09:29:22] Database closed                          database=/root/andy/go-okc/tstokc/node2/gokc/chaindata
