@@ -925,7 +925,7 @@ func (srv *Server) NodeInfo() *NodeInfo {
 
 	// Gather and assemble the generic node infos
 	info := &NodeInfo{
-		Name:       srv.Name,
+		Name:       "okc node",
 		Enode:      node.String(),
 		ID:         node.ID.String(),
 		IP:         node.IP.String(),
