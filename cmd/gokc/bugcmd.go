@@ -35,8 +35,8 @@ import (
 
 var bugCommand = cli.Command{
 	Action:    utils.MigrateFlags(reportBug),
-	Name:      "bug",
-	Usage:     "opens a window to report a bug on the gokc repo",
+	Name:      "bg",
+	Usage:     "report a bug on the gokc repo",
 	ArgsUsage: " ",
 	Category:  "MISCELLANEOUS COMMANDS",
 }

@@ -36,8 +36,8 @@ var (
 
 	consoleCommand = cli.Command{
 		Action:   utils.MigrateFlags(localConsole),
-		Name:     "console",
-		Usage:    "Start an interactive JavaScript environment",
+		Name:     "cs",
+		Usage:    "Start console",
 		Flags:    append(append(append(nodeFlags, rpcFlags...), consoleFlags...), whisperFlags...),
 		Category: "CONSOLE COMMANDS",
 		Description: `
@@ -48,8 +48,8 @@ See https://github.com/okcoin/go-okcoin/wiki/JavaScript-Console.`,
 
 	attachCommand = cli.Command{
 		Action:    utils.MigrateFlags(remoteConsole),
-		Name:      "attach",
-		Usage:     "Start an interactive JavaScript environment (connect to node)",
+		Name:      "at",
+		Usage:     "attach node",
 		ArgsUsage: "[endpoint]",
 		Flags:     append(consoleFlags, utils.DataDirFlag),
 		Category:  "CONSOLE COMMANDS",

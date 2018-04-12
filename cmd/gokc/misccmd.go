@@ -33,7 +33,7 @@ import (
 var (
 	makecacheCommand = cli.Command{
 		Action:    utils.MigrateFlags(makecache),
-		Name:      "makecache",
+		Name:      "mc",
 		Usage:     "Generate okcash verification cache (for testing)",
 		ArgsUsage: "<blockNum> <outputDir>",
 		Category:  "MISCELLANEOUS COMMANDS",
@@ -46,7 +46,7 @@ Regular users do not need to execute it.
 	}
 	makedagCommand = cli.Command{
 		Action:    utils.MigrateFlags(makedag),
-		Name:      "makedag",
+		Name:      "md",
 		Usage:     "Generate okcash mining DAG (for testing)",
 		ArgsUsage: "<blockNum> <outputDir>",
 		Category:  "MISCELLANEOUS COMMANDS",
@@ -59,8 +59,8 @@ Regular users do not need to execute it.
 	}
 	versionCommand = cli.Command{
 		Action:    utils.MigrateFlags(version),
-		Name:      "version",
-		Usage:     "Print version numbers",
+		Name:      "vi",
+		Usage:     "version",
 		ArgsUsage: " ",
 		Category:  "MISCELLANEOUS COMMANDS",
 		Description: `
@@ -69,8 +69,8 @@ The output of this command is supposed to be machine-readable.
 	}
 	licenseCommand = cli.Command{
 		Action:    utils.MigrateFlags(license),
-		Name:      "license",
-		Usage:     "Display license information",
+		Name:      "li",
+		Usage:     "license information",
 		ArgsUsage: " ",
 		Category:  "MISCELLANEOUS COMMANDS",
 	}

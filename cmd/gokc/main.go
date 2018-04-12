@@ -149,7 +149,7 @@ func init() {
 	// Initialize the CLI app and start Gokc
 	app.Action = gokc
 	app.HideVersion = true // we have a command to print the version
-	app.Copyright = "Copyright 2013-2017 The go-okcoin Authors"
+	app.Copyright = "Copyright 2018-2019 The go-okcoin Authors"
 	app.Commands = []cli.Command{
 		// See chaincmd.go:
 		initCommand,

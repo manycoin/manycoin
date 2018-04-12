@@ -33,24 +33,18 @@ import (
 var AppHelpTemplate = `NAME:
    {{.App.Name}} - {{.App.Usage}}
 
-   Copyright 2013-2017 The go-okcoin Authors
+   Copyright 2018-2019 The go-okcoin Authors
 
 USAGE:
    {{.App.HelpName}} [options]{{if .App.Commands}} command [command options]{{end}} {{if .App.ArgsUsage}}{{.App.ArgsUsage}}{{else}}[arguments...]{{end}}
-   {{if .App.Version}}
-VERSION:
-   {{.App.Version}}
-   {{end}}{{if len .App.Authors}}
+  {{if len .App.Authors}}
 AUTHOR(S):
    {{range .App.Authors}}{{ . }}{{end}}
    {{end}}{{if .App.Commands}}
 COMMANDS:
    {{range .App.Commands}}{{join .Names ", "}}{{ "\t" }}{{.Usage}}
-   {{end}}{{end}}{{if .FlagGroups}}
-{{range .FlagGroups}}{{.Name}} OPTIONS:
-  {{range .Flags}}{{.}}
-  {{end}}
-{{end}}{{end}}{{if .App.Copyright }}
+   {{end}}{{end}}
+   {{if .App.Copyright }}
 COPYRIGHT:
    {{.App.Copyright}}
    {{end}}

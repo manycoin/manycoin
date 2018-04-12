@@ -31,8 +31,8 @@ import (
 
 var (
 	walletCommand = cli.Command{
-		Name:      "wallet",
-		Usage:     "Manage Okcoin presale wallets",
+		Name:      "wt",
+		Usage:     "Okcoin wallets",
 		ArgsUsage: "",
 		Category:  "ACCOUNT COMMANDS",
 		Description: `
@@ -66,7 +66,7 @@ passwordfile as argument containing the wallet password in plaintext.`,
 	}
 
 	accountCommand = cli.Command{
-		Name:     "account",
+		Name:     "ma",
 		Usage:    "Manage accounts",
 		Category: "ACCOUNT COMMANDS",
 		Description: `

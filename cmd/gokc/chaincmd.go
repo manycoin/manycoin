@@ -43,8 +43,8 @@ import (
 var (
 	initCommand = cli.Command{
 		Action:    utils.MigrateFlags(initGenesis),
-		Name:      "init",
-		Usage:     "Bootstrap and initialize a new genesis block",
+		Name:      "rj",
+		Usage:     "read genesis config file",
 		ArgsUsage: "<genesisPath>",
 		Flags: []cli.Flag{
 			utils.DataDirFlag,
@@ -60,7 +60,7 @@ It expects the genesis file as argument.`,
 	}
 	importCommand = cli.Command{
 		Action:    utils.MigrateFlags(importChain),
-		Name:      "import",
+		Name:      "im",
 		Usage:     "Import a blockchain file",
 		ArgsUsage: "<filename> (<filename 2> ... <filename N>) ",
 		Flags: []cli.Flag{
@@ -81,7 +81,7 @@ processing will proceed even if an individual RLP-file import failure occurs.`,
 	}
 	exportCommand = cli.Command{
 		Action:    utils.MigrateFlags(exportChain),
-		Name:      "export",
+		Name:      "ex",
 		Usage:     "Export blockchain into file",
 		ArgsUsage: "<filename> [<blockNumFirst> <blockNumLast>]",
 		Flags: []cli.Flag{
@@ -98,7 +98,7 @@ if already existing.`,
 	}
 	copydbCommand = cli.Command{
 		Action:    utils.MigrateFlags(copyDb),
-		Name:      "copydb",
+		Name:      "cp",
 		Usage:     "Create a local chain from a target chaindata folder",
 		ArgsUsage: "<sourceChaindataDir>",
 		Flags: []cli.Flag{
@@ -115,8 +115,8 @@ The first argument must be the directory containing the blockchain to download f
 	}
 	removedbCommand = cli.Command{
 		Action:    utils.MigrateFlags(removeDB),
-		Name:      "removedb",
-		Usage:     "Remove blockchain and state databases",
+		Name:      "de",
+		Usage:     "delete blockchain and state databases",
 		ArgsUsage: " ",
 		Flags: []cli.Flag{
 			utils.DataDirFlag,
@@ -128,7 +128,7 @@ Remove blockchain and state databases`,
 	}
 	dumpCommand = cli.Command{
 		Action:    utils.MigrateFlags(dump),
-		Name:      "dump",
+		Name:      "dp",
 		Usage:     "Dump a specific block from storage",
 		ArgsUsage: "[<blockHash> | <blockNum>]...",
 		Flags: []cli.Flag{

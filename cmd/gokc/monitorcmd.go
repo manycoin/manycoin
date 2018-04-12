@@ -50,8 +50,8 @@ var (
 	}
 	monitorCommand = cli.Command{
 		Action:    utils.MigrateFlags(monitor), // keep track of migration progress
-		Name:      "monitor",
-		Usage:     "Monitor and visualize node metrics",
+		Name:      "mo",
+		Usage:     "Monitor",
 		ArgsUsage: " ",
 		Category:  "MONITOR COMMANDS",
 		Description: `

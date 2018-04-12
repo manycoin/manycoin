@@ -39,8 +39,8 @@ import (
 var (
 	dumpConfigCommand = cli.Command{
 		Action:      utils.MigrateFlags(dumpConfig),
-		Name:        "dumpconfig",
-		Usage:       "Show configuration values",
+		Name:        "dc",
+		Usage:       "display configuration values",
 		ArgsUsage:   "",
 		Flags:       append(append(nodeFlags, rpcFlags...), whisperFlags...),
 		Category:    "MISCELLANEOUS COMMANDS",
