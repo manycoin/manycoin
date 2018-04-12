@@ -421,10 +421,12 @@ new web3._extend.Method({
         params: 2,
         inputFormatter: [web3._extend.formatters.inputAddressFormatter, web3._extend.formatters.inputDefaultBlockNumberFormatter]
     }),
-/*
+
 new web3._extend.Method({
         name: 'getBlock',
-        call: blockCall,
+        call: function(args) {
+		return (web3._extend.utils.isString(args[0])&&args[0].indexOf('0x')===0)?"okc_getBlockByHash":"okc_getBlockByNumber";
+				},
         params: 2,
         inputFormatter: [web3._extend.formatters.inputBlockNumberFormatter, function (val) { return !!val; }],
         outputFormatter: web3._extend.formatters.outputBlockFormatter
@@ -432,22 +434,26 @@ new web3._extend.Method({
 
 new web3._extend.Method({
         name: 'getUncle',
-        call: uncleCall,
+        call: function (args) {
+    return (web3._extend.utils.isString(args[0]) && args[0].indexOf('0x') === 0) ? 'okc_getUncleByBlockHashAndIndex' : 'okc_getUncleByBlockNumberAndIndex';
+	},
         params: 2,
-        inputFormatter: [web3._extend.formatters.inputBlockNumberFormatter, utils.toHex],
+        inputFormatter: [web3._extend.formatters.inputBlockNumberFormatter, web3._extend.utils.toHex],
         outputFormatter: web3._extend.formatters.outputBlockFormatter,
 
     }),
-*/
+
 new web3._extend.Method({
         name: 'getCompilers',
         call: 'okc_getCompilers',
         params: 0
     }),
-/*
+
 new web3._extend.Method({
         name: 'getBlockTransactionCount',
-        call: getBlockTransactionCountCall,
+        call: function (args) {
+    return (web3._extend.utils.isString(args[0]) && args[0].indexOf('0x') === 0) ? 'okc_getBlockTransactionCountByHash' : 'okc_getBlockTransactionCountByNumber';
+},
         params: 1,
         inputFormatter: [web3._extend.formatters.inputBlockNumberFormatter],
         outputFormatter: web3._extend.utils.toDecimal
@@ -455,27 +461,31 @@ new web3._extend.Method({
 
 new web3._extend.Method({
         name: 'getBlockUncleCount',
-        call: uncleCountCall,
+        call: function (args) {
+    return (web3._extend.utils.isString(args[0]) && args[0].indexOf('0x') === 0) ? 'okc_getUncleCountByBlockHash' : 'okc_getUncleCountByBlockNumber';
+},
         params: 1,
         inputFormatter: [web3._extend.formatters.inputBlockNumberFormatter],
         outputFormatter: web3._extend.utils.toDecimal
     }),
-*/
+
 new web3._extend.Method({
         name: 'getTransaction',
         call: 'okc_getTransactionByHash',
         params: 1,
         outputFormatter: web3._extend.formatters.outputTransactionFormatter
     }),
-/*
+
 new web3._extend.Method({
         name: 'getTransactionFromBlock',
-        call: transactionFromBlockCall,
+        call: function (args) {
+    return (web3._extend.utils.isString(args[0]) && args[0].indexOf('0x') === 0) ? 'okc_getTransactionByBlockHashAndIndex' : 'okc_getTransactionByBlockNumberAndIndex';
+},
         params: 2,
         inputFormatter: [web3._extend.formatters.inputBlockNumberFormatter, web3._extend.utils.toHex],
         outputFormatter: web3._extend.formatters.outputTransactionFormatter
     }),
-*/
+
 new web3._extend.Method({
         name: 'getTransactionReceipt',
         call: 'okc_getTransactionReceipt',

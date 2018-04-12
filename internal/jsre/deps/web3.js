@@ -5291,7 +5291,7 @@ var methods = function () {
 
     var getBlock = new Method({
         name: 'getBlock',
-        call: blockCall,
+        call: 'okc_getBlockByNumber',
         params: 2,
         inputFormatter: [formatters.inputBlockNumberFormatter, function (val) { return !!val; }],
         outputFormatter: formatters.outputBlockFormatter
