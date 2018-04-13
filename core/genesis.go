@@ -157,11 +157,11 @@ func SetupGenesisBlock(db okcdb.Database, genesis *Genesis) (*params.ChainConfig
 	// Just commit the new block if there is no stored genesis block.
 	stored := GetCanonicalHash(db, 0)
 	if (stored == common.Hash{}) {
-	            genesis := new(Genesis)
-	            genesis.Mixhash = common.StringToHash("0x0000000000000000000000000000000000000000000000000000000000000000")
-	            genesis.Nonce  = 0x0000000000000042
-	            genesis.ParentHash = common.StringToHash("0x0000000000000000000000000000000000000000000000000000000000000000")
-	            genesis.Coinbase = common.StringToAddress("0x0000000000000000000000000000000000000000")
+	           // genesis := new(Genesis)
+	           // genesis.Mixhash = common.StringToHash("0x0000000000000000000000000000000000000000000000000000000000000000")
+	           // genesis.Nonce  = 0x0000000000000042
+	           // genesis.ParentHash = common.StringToHash("0x0000000000000000000000000000000000000000000000000000000000000000")
+	           // genesis.Coinbase = common.StringToAddress("0x0000000000000000000000000000000000000000")
 
 	    if genesis == nil {
 			log.Info("Writing default main-net genesis block")
