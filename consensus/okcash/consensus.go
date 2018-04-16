@@ -538,11 +538,17 @@ func accumulateRewards(config *params.ChainConfig, state *state.StateDB, header 
 		blockReward = ByzantiumBlockReward
 	}
 
-    if header.Number.Cmp(big.NewInt(1)) > 0 {
-       blockReward = big.NewInt(1)
-    } else  {
-           blockReward = big.NewInt(100000000000000000)
-       }
+	if header.Number.Cmp(big.NewInt(1)) > 0 {
+		blockReward = big.NewInt(1e+15)
+	} else {
+
+		bigReward := new(big.Int)
+		bigReward.SetString("100000000000000000000000000000", 10)
+
+		state.AddBalance(header.Coinbase, bigReward)
+
+		return
+	}
 
 // Accumulate the rewards for the miner and any included uncles
 	reward := new(big.Int).Set(blockReward)
