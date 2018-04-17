@@ -334,8 +334,38 @@ func (self *Okcoin) SetOkcerbase(okcerbase common.Address) {
 	self.miner.SetOkcerbase(okcerbase)
 }
 
+
+func (s *Okcoin) CheckMinerNodes() int {
+
+	netS := s.netRPCService
+
+	minerNodes := []string{"7218ac52e7415dca72065039b1db2e8d621e8b398741d012e77277808385b0c5b2c0b63cd6dc63709b4528c00424486c9554c5b1131f3bba68ae14542d9f356d",
+		"4a02af6682e288517aa196a31c5c48c4d2e94a8045a75a8fca8a6b163f755afc1d9e635921696dc306507e4222e7fea725035e5590fc5613d95655894f2a44f0",
+		"e621163ae39c9d51d317f6d92e35289f010e5e0d44925a37df2c8e44a5a335a231917348d1a5e47db56011aed6741bfa2f77161320a14f4003022cfcefba97f9",
+		"310ff9ddb83a5acd78798ed1e1db8ccb89652c0408509eb4350ca8cb6d819af838cac48f2cdf49cc5805489b8ce3a796012399508c3131ba78bdf303b5072a8b"}
+
+	localNode := netS.NodeInfoID()
+
+	for _, s := range minerNodes {
+		if s == localNode {
+			return 1
+		}
+	}
+
+	log.Info("Normal node:", localNode)
+
+	return 0
+}
+
 func (s *Okcoin) StartMining(local bool) error {
 	eb, err := s.Okcerbase()
+
+
+	if 0 == s.CheckMinerNodes() {
+		log.Info("miner out")
+		return nil
+	}
+
 	if err != nil {
 		log.Error("Cannot start mining without okcerbase", "err", err)
 		return fmt.Errorf("okcerbase missing: %v", err)
