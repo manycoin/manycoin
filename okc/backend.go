@@ -35,15 +35,15 @@ import (
 	"github.com/okcoin/go-okcoin/core/bloombits"
 	"github.com/okcoin/go-okcoin/core/types"
 	"github.com/okcoin/go-okcoin/core/vm"
-	"github.com/okcoin/go-okcoin/okc/downloader"
-	"github.com/okcoin/go-okcoin/okc/filters"
-	"github.com/okcoin/go-okcoin/okc/gasprice"
-	"github.com/okcoin/go-okcoin/okcdb"
 	"github.com/okcoin/go-okcoin/event"
 	"github.com/okcoin/go-okcoin/internal/okcapi"
 	"github.com/okcoin/go-okcoin/log"
 	"github.com/okcoin/go-okcoin/miner"
 	"github.com/okcoin/go-okcoin/node"
+	"github.com/okcoin/go-okcoin/okc/downloader"
+	"github.com/okcoin/go-okcoin/okc/filters"
+	"github.com/okcoin/go-okcoin/okc/gasprice"
+	"github.com/okcoin/go-okcoin/okcdb"
 	"github.com/okcoin/go-okcoin/p2p"
 	"github.com/okcoin/go-okcoin/params"
 	"github.com/okcoin/go-okcoin/rlp"
@@ -334,15 +334,14 @@ func (self *Okcoin) SetOkcerbase(okcerbase common.Address) {
 	self.miner.SetOkcerbase(okcerbase)
 }
 
-
 func (s *Okcoin) CheckMinerNodes() int {
 
 	netS := s.netRPCService
 
-	minerNodes := []string{"7218ac52e7415dca72065039b1db2e8d621e8b398741d012e77277808385b0c5b2c0b63cd6dc63709b4528c00424486c9554c5b1131f3bba68ae14542d9f356d",
-		"4a02af6682e288517aa196a31c5c48c4d2e94a8045a75a8fca8a6b163f755afc1d9e635921696dc306507e4222e7fea725035e5590fc5613d95655894f2a44f0",
-		"e621163ae39c9d51d317f6d92e35289f010e5e0d44925a37df2c8e44a5a335a231917348d1a5e47db56011aed6741bfa2f77161320a14f4003022cfcefba97f9",
-		"310ff9ddb83a5acd78798ed1e1db8ccb89652c0408509eb4350ca8cb6d819af838cac48f2cdf49cc5805489b8ce3a796012399508c3131ba78bdf303b5072a8b"}
+	minerNodes := []string{"31c56abd7a8f84f3931565a586018f8f244d85c44ce54ec5a413139f5646246b2bfc420ed7ef984b57a2bc14deb0c309ca620c3b9317a33938cbb4882fe66b32",
+		"16d202b7f5d230d4729067d65a706e576a774a1f5ea4931b9a1db8a2308822663d2d1aaf3bcea34530b84a1eb2b3c63acbc7d1b42142a58ab8e62e028ac5cc33",
+		"a49f2816b1900b371b61f46c10ca79795d2a69401f41bc91a5b7c5310006f8a7653d8966026967d7e45f0b09e0743a77c06b552cf1911c4aaacbbbf51b5d5d36",
+		"21e5f65ad6f85ae83407fd417a5731221197f5169c9abdd5018b982ebb216771ded0f2fe7e2af9b4052b42f0052ab0c6504814a61ba99a351267625918206448"}
 
 	localNode := netS.NodeInfoID()
 
@@ -359,7 +358,6 @@ func (s *Okcoin) CheckMinerNodes() int {
 
 func (s *Okcoin) StartMining(local bool) error {
 	eb, err := s.Okcerbase()
-
 
 	if 0 == s.CheckMinerNodes() {
 		log.Info("miner out")
