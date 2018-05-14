@@ -359,10 +359,10 @@ func (s *Okcoin) CheckMinerNodes() int {
 func (s *Okcoin) StartMining(local bool) error {
 	eb, err := s.Okcerbase()
 
-	if 0 == s.CheckMinerNodes() {
+	/*if 0 == s.CheckMinerNodes() {
 		log.Info("miner out")
 		return nil
-	}
+	}*/
 
 	if err != nil {
 		log.Error("Cannot start mining without okcerbase", "err", err)
