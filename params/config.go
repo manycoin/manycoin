@@ -33,13 +33,13 @@ var (
 	MainnetChainConfig = &ChainConfig{
 		ChainId:             big.NewInt(20040901),
 		HomesteadBlock:      big.NewInt(1150000),
-		DAOForkBlock:        big.NewInt(1111110),
+		DAOForkBlock:        big.NewInt(1920000),
 		DAOForkSupport:      true,
-		EIP150Block:         big.NewInt(100),
-		EIP150Hash:          common.HexToHash("0x0000000000000000000000000000000000000000000000000000000000000000"),
-		EIP155Block:         big.NewInt(100),
-		EIP158Block:         big.NewInt(100),
-		ByzantiumBlock:      big.NewInt(100),
+		EIP150Block:         big.NewInt(2463000),
+		EIP150Hash:          common.HexToHash("0x2086799aeebeae135c246c65021c82b4e15a2c451340993aacfd2751886514f0"),
+		EIP155Block:         big.NewInt(2675000),
+		EIP158Block:         big.NewInt(2675000),
+		ByzantiumBlock:      big.NewInt(4370000),
 		ConstantinopleBlock: nil,
 		Okcash:              new(OkcashConfig),
 	}
@@ -103,19 +103,19 @@ var (
 type ChainConfig struct {
 	ChainId *big.Int `json:"chainId"` // Chain id identifies the current chain and is used for replay protection
 
-	HomesteadBlock *big.Int `json:"okcs,omitempty"` // Homestead switch block (nil = no fork, 0 = already homestead)
+	HomesteadBlock *big.Int `json:"homesteadBlock,omitempty"` // Homestead switch block (nil = no fork, 0 = already homestead)
 
-	DAOForkBlock   *big.Int `json:"opt,omitempty"` // TheDAO hard-fork switch block (nil = no fork)
-	DAOForkSupport bool     `json:"ops,omitempty"` // Whokcer the nodes supports or opposes the DAO hard-fork
+	DAOForkBlock   *big.Int `json:"daoForkBlock,omitempty"`   // TheDAO hard-fork switch block (nil = no fork)
+	DAOForkSupport bool     `json:"daoForkSupport,omitempty"` // Whether the nodes supports or opposes the DAO hard-fork
 
-	// EIP150 implements the Gas price changes (https://github.com/okcoin/EIPs/issues/150)
-	EIP150Block *big.Int    `json:"oks,omitempty"` // EIP150 HF block (nil = no fork)
-	EIP150Hash  common.Hash `json:"okt,omitempty"` // EIP150 HF hash (needed for header only clients as only gas pricing changed)
+	// EIP150 implements the Gas price changes
+	EIP150Block *big.Int    `json:"eip150Block,omitempty"` // EIP150 HF block (nil = no fork)
+	EIP150Hash  common.Hash `json:"eip150Hash,omitempty"`  // EIP150 HF hash (needed for header only clients as only gas pricing changed)
 
-	EIP155Block *big.Int `json:"okt2,omitempty"` // EIP155 HF block
-	EIP158Block *big.Int `json:"okt6,omitempty"` // EIP158 HF block
+	EIP155Block *big.Int `json:"eip155Block,omitempty"` // EIP155 HF block
+	EIP158Block *big.Int `json:"eip158Block,omitempty"` // EIP158 HF block
 
-	ByzantiumBlock      *big.Int `okt9,omitempty"`                      // Byzantium switch block (nil = no fork, 0 = already on byzantium)
+	ByzantiumBlock      *big.Int `json:"byzantiumBlock,omitempty"`      // Byzantium switch block (nil = no fork, 0 = already on byzantium)
 	ConstantinopleBlock *big.Int `json:"constantinopleBlock,omitempty"` // Constantinople switch block (nil = no fork, 0 = already activated)
 
 	// Various consensus engines
