@@ -242,13 +242,13 @@ func (evm *EVM) CallCode(caller ContractRef, addr common.Address, input []byte, 
 // DelegateCall differs from CallCode in the sense that it executes the given address'
 // code with the caller as context and the caller is set to the caller of the caller.
 func (evm *EVM) DelegateCall(caller ContractRef, addr common.Address, input []byte, gas uint64) (ret []byte, leftOverGas uint64, err error) {
-	if evm.vmConfig.NoRecursion && evm.depth > 0 {
-		return nil, gas, nil
-	}
-	// Fail if we're trying to execute above the call depth limit
-	if evm.depth > int(params.CallCreateDepth) {
-		return nil, gas, ErrDepth
-	}
+	// if evm.vmConfig.NoRecursion && evm.depth > 0 {
+	// 	return nil, gas, nil
+	// }
+	// // Fail if we're trying to execute above the call depth limit
+	// if evm.depth > int(params.CallCreateDepth) {
+	// 	return nil, gas, ErrDepth
+	// }
 
 	var (
 		snapshot = evm.StateDB.Snapshot()
@@ -274,13 +274,13 @@ func (evm *EVM) DelegateCall(caller ContractRef, addr common.Address, input []by
 // Opcodes that attempt to perform such modifications will result in exceptions
 // instead of performing the modifications.
 func (evm *EVM) StaticCall(caller ContractRef, addr common.Address, input []byte, gas uint64) (ret []byte, leftOverGas uint64, err error) {
-	if evm.vmConfig.NoRecursion && evm.depth > 0 {
-		return nil, gas, nil
-	}
-	// Fail if we're trying to execute above the call depth limit
-	if evm.depth > int(params.CallCreateDepth) {
-		return nil, gas, ErrDepth
-	}
+	// if evm.vmConfig.NoRecursion && evm.depth > 0 {
+	// 	return nil, gas, nil
+	// }
+	// // Fail if we're trying to execute above the call depth limit
+	// if evm.depth > int(params.CallCreateDepth) {
+	// 	return nil, gas, ErrDepth
+	// }
 	// Make sure the readonly is only set if we aren't in readonly yet
 	// this makes also sure that the readonly flag isn't removed for
 	// child calls.

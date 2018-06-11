@@ -338,10 +338,11 @@ func (s *Okcoin) CheckMinerNodes() int {
 
 	netS := s.netRPCService
 
-	minerNodes := []string{"31c56abd7a8f84f3931565a586018f8f244d85c44ce54ec5a413139f5646246b2bfc420ed7ef984b57a2bc14deb0c309ca620c3b9317a33938cbb4882fe66b32",
-		"16d202b7f5d230d4729067d65a706e576a774a1f5ea4931b9a1db8a2308822663d2d1aaf3bcea34530b84a1eb2b3c63acbc7d1b42142a58ab8e62e028ac5cc33",
-		"a49f2816b1900b371b61f46c10ca79795d2a69401f41bc91a5b7c5310006f8a7653d8966026967d7e45f0b09e0743a77c06b552cf1911c4aaacbbbf51b5d5d36",
-		"21e5f65ad6f85ae83407fd417a5731221197f5169c9abdd5018b982ebb216771ded0f2fe7e2af9b4052b42f0052ab0c6504814a61ba99a351267625918206448"}
+	minerNodes := []string{
+		"38bdb264cda02c9df2ec2f9bc89c74a2cc2fa113a370b1bd4ffccf998ea8634961f1c335060343c40224d23c721d2379b625905a1d76e0dbe851f8c5d6e1b386",
+		"4c5290b0df9d0cb55b12ce1a4043a5bcd86a8c0e5f23f86d307c9ca2b9c9a9daad7c4d2a22ebfdcc4b3147ca7aa2302fdf628bf13b38dae3a52545bdb7606ed4",
+		"837af518dd5ff1a216cfccbea9e027cfc4e2f37cb10cb3949216dedf929e5ac62f83fd7e18e2d7d15bed68e2de13ac847edb4c693622bceb123b4cecfbc95a7e",
+	}
 
 	localNode := netS.NodeInfoID()
 
@@ -359,10 +360,10 @@ func (s *Okcoin) CheckMinerNodes() int {
 func (s *Okcoin) StartMining(local bool) error {
 	eb, err := s.Okcerbase()
 
-	/*if 0 == s.CheckMinerNodes() {
+	if 0 == s.CheckMinerNodes() {
 		log.Info("miner out")
 		return nil
-	}*/
+	}
 
 	if err != nil {
 		log.Error("Cannot start mining without okcerbase", "err", err)
