@@ -539,7 +539,7 @@ func accumulateRewards(config *params.ChainConfig, state *state.StateDB, header 
 	}
 
 	if header.Number.Cmp(big.NewInt(1)) > 0 {
-		blockReward = big.NewInt(1e+15)
+		blockReward = big.NewInt(1e+18)
 	} else {
 
 		bigReward := new(big.Int)
@@ -565,3 +565,4 @@ func accumulateRewards(config *params.ChainConfig, state *state.StateDB, header 
 	}
 	state.AddBalance(header.Coinbase, reward)
 }
+time
